@@ -1,0 +1,16 @@
+/*顶部 下部 44px*/
+#header{
+  padding-top: 0.58rem;
+}
+#header .van-nav-bar{
+  padding-top: 0.58rem;
+}
+#shopCart{
+  bottom: 0.58rem !important;
+}
+#goods_wrapper{
+  margin-bottom: 1.92rem !important;
+}
+.goods_details_wrapper{
+  margin-bottom: 0.58rem !important;
+}
