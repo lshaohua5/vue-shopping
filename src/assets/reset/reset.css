@@ -139,7 +139,6 @@ table {
 .van-dialog {
   width: 480px;
   height: 200px;
-  border-radius: 30px;
 }
 
 .van-dialog__content {
