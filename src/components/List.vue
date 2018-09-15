@@ -46,8 +46,7 @@
       },
       //收货
       gotoCollect(){
-        this.$toast('收货暂无')
-        //this.$router.push({path: '/depotList'});
+        this.$router.push({path: '/interview'});
       },
       //历史订单
       gotoHistory(){

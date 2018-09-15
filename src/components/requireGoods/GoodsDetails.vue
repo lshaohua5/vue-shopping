@@ -177,13 +177,19 @@
 
       // 提交订单
       submit() {
-        this.orderStatusShow = true;
-        this.statusText = '已完成';
-        this.orderInfoShow = true;
-        this.orderFinish = false;
-        this.$toast('订单提交成功');
-        this.deleteCurFoodsInfo(); //删除当前localstorage列表
-
+        if (!this.enquiryDate) {
+          this.showCheckDate = true
+        } else {
+          this.orderStatusShow = true;
+          this.statusText = '已完成';
+          this.orderInfoShow = true;
+          this.orderFinish = false;
+          this.orderNumber = 'KM20180911';
+          this.enquiryDate = this.filters.fromDateAll(new Date);
+          this.orderAddTime = this.filters.fromDateAll(new Date);
+          this.$toast('订单提交成功');
+          this.deleteCurFoodsInfo(); //删除当前localstorage列表
+        }
       },
 
       // 删除 订单
@@ -200,7 +206,7 @@
       },
       // 删除订单api
       removeRuest() {
-        let _this=this
+        let _this=this;
         this.$toast('订单删除成功');
         setTimeout(function () {
           _this.$router.push({
@@ -217,7 +223,8 @@
       saveRequest() {
         this.orderInfoShow = true;
         this.orderNumber = 'KM20180911';
-        this.orderAddTime = this.filters.fromDateAll(new Date);;
+        this.enquiryDate = this.filters.fromDateAll(new Date);
+        this.orderAddTime = this.filters.fromDateAll(new Date);
       },
 
       // 初始化iscroll

@@ -490,17 +490,21 @@
             border-right 1Px solid #DFDFDF
             font-size 0
             position relative
+            font-size 0
             .text
               font-size 24px
               font-family MicrosoftYaHei
               font-weight 400
               color rgba(51, 51, 51, 1)
               line-height 30px
-              overflow hidden
-              white-space nowrap
-              text-overflow ellipsis
-              width 1.6rem;
-              display inline-block;
+              display inline-block
+            .bar
+              width 4Px
+              height 100%
+              background #F1F1F1
+              position absolute
+              top 0
+              left 0
             .menuTotalCount
               display inline-block
               min-width 40px
@@ -512,9 +516,9 @@
               border-radius 4Px
               background #3691e4
               position absolute
-              z-index 20
+              z-index 25
               top 10px
-              right 5px
+              right 5Px
               color #fff
               font-size 20px
           .menu-item:first-child
@@ -525,12 +529,7 @@
             .text
               color #3691e4
             .bar
-              width 4Px
-              height 100%
               background #3691e4
-              position absolute
-              top 0
-              left 0
       .foods-wrapper
         flex 1
         background-color: #fff;
