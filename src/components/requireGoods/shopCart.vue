@@ -204,6 +204,10 @@
         }).then(() => {
           // 删除 localStorage 中的当前供应商 当前仓库的数据
           this.deleteCurFoodsInfo();
+          // 清空购物车
+          selectFoods.forEach((food) => {
+            food.count = 0
+          })
         }).catch(() => {
 
         });
@@ -221,7 +225,7 @@
             }
           }
         }
-        localStorage.setItem('selectFoodInfo',JSON.stringify(selectFoodInfo))
+        localStorage.setItem('selectFoodInfo', JSON.stringify(selectFoodInfo))
       },
       // 点击下单
       order() {
