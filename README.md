@@ -1,7 +1,3 @@
-# shoppingApp111
-### 有不清楚的可以直接加微信：lshaohua5  沟通
-> A Vue.js project
-
 ## Build Setup
 
 ``` bash
